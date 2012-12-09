@@ -1,5 +1,5 @@
 Name: x11-driver-video-modesetting
-Version: 0.4.0
+Version: 0.5.0
 Release: 1
 Epoch: 1
 Summary: Generic X.org driver
@@ -17,8 +17,9 @@ BuildRequires: x11-util-macros >= 1.0.1
 Requires: x11-server-common %(xserver-sdk-abi-requires videodrv)
 
 %description
-x11-driver-video-modesetting is a generic X.org driver for hardware managed
-by KMS (Kernel Mode Setting), eg: ATI/AMD, Intel & Nvidia.
+x11-driver-video-modesetting is a generic X.org driver for hardware.
+
+It managed by KMS (Kernel Mode Setting), eg: ATI/AMD, Intel&Nvidia.
 
 %prep
 %setup -q -n xf86-video-modesetting-%{version}
@@ -33,3 +34,10 @@ by KMS (Kernel Mode Setting), eg: ATI/AMD, Intel & Nvidia.
 %files
 %{_libdir}/xorg/modules/drivers/*
 %{_mandir}/man4/modesetting.*
+
+
+%changelog
+* Mon Jun 25 2012 Alexander Khrukin <akhrukin@mandriva.org> 1:0.4.0-1
++ Revision: 806794
+- imported package x11-driver-video-modesetting
+
