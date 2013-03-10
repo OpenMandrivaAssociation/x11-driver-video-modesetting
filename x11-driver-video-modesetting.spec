@@ -1,5 +1,8 @@
+# X.org modules reference symbols provided by the X server
+%global _disable_ld_no_undefined 1
+
 Name: x11-driver-video-modesetting
-Version: 0.5.0
+Version: 0.6.0
 Release: 1
 Epoch: 1
 Summary: Generic X.org driver
