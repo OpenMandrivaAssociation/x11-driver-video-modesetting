@@ -1,23 +1,22 @@
 # X.org modules reference symbols provided by the X server
 %global _disable_ld_no_undefined 1
 
-Name: x11-driver-video-modesetting
-Version: 0.6.0
-Release: 1
-Epoch: 1
-Summary: Generic X.org driver
-Group: System/X11
-URL: http://xorg.freedesktop.org
-Source0: http://xorg.freedesktop.org/releases/individual/driver/xf86-video-modesetting-%{version}.tar.bz2
+Name:		x11-driver-video-modesetting
+Version:	0.7.0
+Release:	1
+Epoch:		1
+Summary:	Generic X.org driver
+Group:		System/X11
+URL:		http://xorg.freedesktop.org
+Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-modesetting-%{version}.tar.bz2
+License:	MIT
+BuildRequires:	pkgconfig(libdrm)
+BuildRequires: 	11-proto-devel >= 1.0.0
+BuildRequires:	x11-server-devel >= 1.0.1
+BuildRequires:	x11-util-macros >= 1.0.1
 
-License: MIT
-
-BuildRequires: libdrm-devel >= 2.0
-BuildRequires: x11-proto-devel >= 1.0.0
-BuildRequires: x11-server-devel >= 1.0.1
-BuildRequires: x11-util-macros >= 1.0.1
-
-Requires: x11-server-common %(xserver-sdk-abi-requires videodrv)
+Requires:	x11-server-common %(xserver-sdk-abi-requires videodrv)
+Requires:	udev
 
 %description
 x11-driver-video-modesetting is a generic X.org driver for hardware.
