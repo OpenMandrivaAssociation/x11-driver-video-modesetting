@@ -11,7 +11,7 @@ URL:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-modesetting-%{version}.tar.bz2
 License:	MIT
 BuildRequires:	pkgconfig(libdrm)
-BuildRequires: 	11-proto-devel >= 1.0.0
+BuildRequires:	x11-proto-devel >= 1.0.0
 BuildRequires:	x11-server-devel >= 1.0.1
 BuildRequires:	x11-util-macros >= 1.0.1
 
