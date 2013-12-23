@@ -1,0 +1,32 @@
+--- xf86-video-modesetting-0.8.0/src/driver.c.omv~	2013-12-23 20:26:57.542680994 +0100
++++ xf86-video-modesetting-0.8.0/src/driver.c	2013-12-23 20:28:39.022682300 +0100
+@@ -478,7 +478,7 @@ static void dispatch_dirty(ScreenPtr pSc
+     ret = dispatch_dirty_region(scrn, pixmap, ms->damage, fb_id);
+     if (ret == -EINVAL || ret == -ENOSYS) {
+ 	ms->dirty_enabled = FALSE;
+-	DamageUnregister(&pScreen->GetScreenPixmap(pScreen)->drawable, ms->damage);
++	DamageUnregister(ms->damage);
+ 	DamageDestroy(ms->damage);
+ 	ms->damage = NULL;
+ 	xf86DrvMsg(scrn->scrnIndex, X_INFO, "Disabling kernel dirty updates, not required.\n");
+@@ -1029,7 +1029,7 @@ CloseScreen(CLOSE_SCREEN_ARGS_DECL)
+     modesettingPtr ms = modesettingPTR(pScrn);
+ 
+     if (ms->damage) {
+-	DamageUnregister(&pScreen->GetScreenPixmap(pScreen)->drawable, ms->damage);
++	DamageUnregister(ms->damage);
+ 	DamageDestroy(ms->damage);
+ 	ms->damage = NULL;
+     }
+--- xf86-video-modesetting-0.8.0/src/drmmode_display.c.omv~	2013-12-23 20:28:49.696015797 +0100
++++ xf86-video-modesetting-0.8.0/src/drmmode_display.c	2013-12-23 20:29:01.289349257 +0100
+@@ -514,8 +514,7 @@ drmmode_set_scanout_pixmap(xf86CrtcPtr c
+ 			drmModeRmFB(drmmode->fd, ppriv->fb_id);
+ 		}
+ 		if (drmmode_crtc->slave_damage) {
+-			DamageUnregister(&crtc->randr_crtc->scanout_pixmap->drawable,
+-					 drmmode_crtc->slave_damage);
++			DamageUnregister(drmmode_crtc->slave_damage);
+ 			drmmode_crtc->slave_damage = NULL;
+ 		}
+ 		return TRUE;
