@@ -37,9 +37,3 @@ It managed by KMS (Kernel Mode Setting), eg: ATI/AMD, Intel&Nvidia.
 %{_libdir}/xorg/modules/drivers/*
 %{_mandir}/man4/modesetting.*
 
-
-%changelog
-* Mon Jun 25 2012 Alexander Khrukin <akhrukin@mandriva.org> 1:0.4.0-1
-+ Revision: 806794
-- imported package x11-driver-video-modesetting
-
