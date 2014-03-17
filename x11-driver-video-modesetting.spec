@@ -3,7 +3,7 @@
 
 Name:		x11-driver-video-modesetting
 Version:	0.8.1
-Release:	1
+Release:	2
 Epoch:		1
 Summary:	Generic X.org driver
 Group:		System/X11
