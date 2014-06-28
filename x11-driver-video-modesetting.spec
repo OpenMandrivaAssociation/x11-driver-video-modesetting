@@ -2,8 +2,8 @@
 %global _disable_ld_no_undefined 1
 
 Name:		x11-driver-video-modesetting
-Version:	0.8.1
-Release:	3
+Version:	0.9.0
+Release:	1
 Epoch:		1
 Summary:	Generic X.org driver
 Group:		System/X11
@@ -27,7 +27,7 @@ It managed by KMS (Kernel Mode Setting), eg: ATI/AMD, Intel&Nvidia.
 %setup -q -n xf86-video-modesetting-%{version}
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
