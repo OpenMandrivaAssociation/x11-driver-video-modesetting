@@ -1,5 +1,2 @@
-removed_sources:
-  xf86-video-modesetting-0.7.0.tar.bz2: 9d7e766699923b3e0dfa06a98bdcb80dce35003d
-  xf86-video-modesetting-0.8.0.tar.bz2: 5ada282cedc46327c8c97410e05b14fc40bc67fd
 sources:
-  xf86-video-modesetting-0.9.0.tar.bz2: 982e5140ad81051d51c6370d065f3033ee4ad24b
+  xf86-video-modesetting-0.9.0~20150208.tar.xz: d9a70eb6a0cf0a1588421c9441df65858dd3d87b
