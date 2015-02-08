@@ -18,7 +18,6 @@ BuildRequires:	x11-proto-devel >= 1.0.0
 BuildRequires:	x11-server-devel >= 1.0.1
 BuildRequires:	x11-util-macros >= 1.0.1
 
-Requires:	%(xserver-sdk-abi-requires ansic)
 Requires:	x11-server-common %(xserver-sdk-abi-requires videodrv)
 Requires:	udev
 
