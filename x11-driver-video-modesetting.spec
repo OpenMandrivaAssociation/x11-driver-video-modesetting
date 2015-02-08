@@ -4,7 +4,9 @@
 Name:		x11-driver-video-modesetting
 %define	gitdate	20150208
 Version:	0.9.0~%{gitdate}
-Release:	1
+# (TPG) THIS driver is merged into x11-server-1.17.0
+# DO NOT REVIVE IT !!!
+Release:	OBSOLETED by x11-server-1.17.0
 Epoch:		2
 Summary:	Generic X.org driver
 Group:		System/X11
